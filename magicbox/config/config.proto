@@ -142,7 +142,7 @@ message OAuth2 {
 
 
 message MessageConfig {
-	rabbit.enum.MessageType messageType = 1;
+	magicbox.enum.MessageType messageType = 1;
 	google.protobuf.Any options = 2;
 }
 
@@ -154,10 +154,10 @@ message MessageSMSAliCloudConfig {
 }
 
 message MessageWebhookConfig {
-	rabbit.enum.WebhookAPP app = 1;
+	magicbox.enum.WebhookAPP app = 1;
 	string url = 2;
 	string secret = 3;
-	rabbit.enum.HTTPMethod method = 4;
+	magicbox.enum.HTTPMethod method = 4;
 	map<string, string> headers = 5;
 }
 
