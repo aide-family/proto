@@ -7,7 +7,7 @@ This repository contains the proto files for the Aide Family.
 ```
 git submodule init
 git submodule update
-git submodule add git@github.com:aide-family/proto.git
+git submodule add https://github.com/aide-family/proto.git
 git submodule update --remote
 ```
 
