@@ -141,6 +141,7 @@ message ListWebhookRequest {
 		expression: "this.size() <= 100",
 		message: "keyword must be less than or equal to 100",
 	}];
+	magicbox.enum.GlobalStatus status = 5;
 }
 message ListWebhookReply {
 	repeated WebhookItem items = 1;
