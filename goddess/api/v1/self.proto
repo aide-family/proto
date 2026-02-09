@@ -6,8 +6,8 @@ option go_package = "github.com/aide-family/goddess/pkg/api/v1;v1";
 
 import "google/api/annotations.proto";
 import "buf/validate/validate.proto";
-import "api/v1/namespace.proto";
-import "api/v1/user.proto";
+import "goddess/api/v1/namespace.proto";
+import "goddess/api/v1/user.proto";
 
 service SelfService {
     rpc Info(InfoRequest) returns (goddess.api.v1.UserItem) {
