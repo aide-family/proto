@@ -6,7 +6,7 @@ option go_package = "github.com/aide-family/magicbox/oauth;oauth";
 option java_multiple_files = true;
 option java_package = "magicbox.oauth";
 
-import "config/config.proto";
+import "magicbox/config/config.proto";
 import "buf/validate/validate.proto";
 
 message OAuth2ReportItem {
