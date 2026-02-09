@@ -11,7 +11,7 @@ import "google/protobuf/duration.proto";
 import "buf/validate/validate.proto";
 import "magicbox/enum/enum.proto";
 import "magicbox/enum/strategy.proto";
-import "marksman/api/v1/level.proto";
+import "api/v1/level.proto";
 
 service StrategyMetric {
 	rpc SaveStrategyMetric (SaveStrategyMetricRequest) returns (SaveStrategyMetricReply) {
