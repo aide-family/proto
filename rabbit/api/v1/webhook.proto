@@ -77,7 +77,7 @@ message CreateWebhookRequest {
 		expression: "this.size() > 0",
 		message: "url must be greater than 0",
 	}];
-	rabbit.enum.HTTPMethod method = 4 [(buf.validate.field).required = true, (buf.validate.field).cel = {
+	magicbox.enum.HTTPMethod method = 4 [(buf.validate.field).required = true, (buf.validate.field).cel = {
 		expression: "this in [magicbox.enum.HTTPMethod.GET, magicbox.enum.HTTPMethod.POST, magicbox.enum.HTTPMethod.PUT, magicbox.enum.HTTPMethod.DELETE, magicbox.enum.HTTPMethod.PATCH]",
 		message: "method must be in ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']",
 	}];
@@ -100,7 +100,7 @@ message UpdateWebhookRequest {
 		expression: "this.size() > 0",
 		message: "url must be greater than 0",
 	}];
-	rabbit.enum.HTTPMethod method = 5 [(buf.validate.field).required = true, (buf.validate.field).cel = {
+	magicbox.enum.HTTPMethod method = 5 [(buf.validate.field).required = true, (buf.validate.field).cel = {
 		expression: "this in [magicbox.enum.HTTPMethod.GET, magicbox.enum.HTTPMethod.POST, magicbox.enum.HTTPMethod.PUT, magicbox.enum.HTTPMethod.DELETE, magicbox.enum.HTTPMethod.PATCH]",
 		message: "method must be in ['GET', 'POST', 'PUT', 'DELETE', 'PATCH']",
 	}];
