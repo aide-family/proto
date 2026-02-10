@@ -4,7 +4,7 @@ package magicbox.config;
 
 import "google/protobuf/any.proto";
 import "google/protobuf/duration.proto";
-import "magicbox/enum/enum.proto";
+import "enum/enum.proto";
 
 option go_package = "github.com/aide-family/magicbox/config;config";
 
