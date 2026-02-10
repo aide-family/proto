@@ -590,6 +590,30 @@ paths:
                         application/json:
                             schema:
                                 $ref: '#/components/schemas/marksman.api.v1.DeleteStrategyGroupReply'
+    /v1/strategy-group/{uid}/receivers:
+        post:
+            tags:
+                - Strategy
+            operationId: Strategy_StrategyGroupBindReceivers
+            parameters:
+                - name: uid
+                  in: path
+                  required: true
+                  schema:
+                    type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/marksman.api.v1.StrategyGroupBindReceiversRequest'
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/marksman.api.v1.StrategyGroupBindReceiversReply'
     /v1/strategy-group/{uid}/status:
         put:
             tags:
@@ -1040,6 +1064,18 @@ components:
                 nextUID:
                     type: integer
                     format: uint32
+        marksman.api.v1.StrategyGroupBindReceiversReply:
+            type: object
+            properties: {}
+        marksman.api.v1.StrategyGroupBindReceiversRequest:
+            type: object
+            properties:
+                uid:
+                    type: string
+                receiverUIDs:
+                    type: array
+                    items:
+                        type: string
         marksman.api.v1.StrategyGroupItem:
             type: object
             properties:
